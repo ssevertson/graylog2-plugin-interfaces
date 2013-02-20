@@ -241,4 +241,11 @@ public final class Tools {
         return list;
     }
 
+    public static String buildElasticSearchTimeFormat(double timestamp) {
+    	Calendar cal = Calendar.getInstance();
+    	cal.setTimeInMillis((long) (1000 * timestamp));
+
+        return String.format("%1$tY-%1$tm-%1$td %1$tH-%1$tM-%1$tS", cal); // ramtamtam
+    }
+
 }
